@@ -3,7 +3,7 @@ import Hero from "./components/Hero.js";
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Navbar />
       <Hero />
     </div>

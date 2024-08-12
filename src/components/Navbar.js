@@ -1,7 +1,9 @@
+import Logo from "../assets/logo-icon.png";
+
 export default function Navbar() {
   return (
     <nav>
-      <h1>I'm navbar</h1>
+      <img src={Logo} alt="Airbnb logo" className="nav-logo" />
     </nav>
   );
 }
