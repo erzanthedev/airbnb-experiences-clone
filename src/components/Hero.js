@@ -1,10 +1,8 @@
-import HeroIcon from "../assets/hero-icon.png";
-
 const Hero = () => {
   return (
     <section className="hero">
       <img
-        src={HeroIcon}
+        src="/assets/hero-icon.png"
         alt="a grid of various images"
         className="hero-image"
       />

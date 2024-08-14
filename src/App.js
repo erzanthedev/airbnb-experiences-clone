@@ -5,7 +5,7 @@ import Card from "./components/Card.js";
 
 export default function App() {
   // const cards = data.map((user) => {
-  //   return user;
+  // return <Card />;
   // });
 
   return (
