@@ -1,29 +1,25 @@
 export default function Card(props) {
-  console.log(props.user);
+  const { openSpots, location, title, coverImg, stats, price } = props;
   let badgeText;
-  if (props.user.openSpots === 0) {
+  if (openSpots === 0) {
     badgeText = "SOLD OUT";
-  } else if (props.user.location === "Online") {
+  } else if (location === "Online") {
     badgeText = "Online";
   }
 
   return (
     <div className="card">
       {badgeText && <div className="card-badge">{badgeText}</div>}
-      <img
-        className="card-image"
-        src={`/assets/${props.user.coverImg}`}
-        alt={props.user.title}
-      />
+      <img className="card-image" src={`/assets/${coverImg}`} alt={title} />
       <div className="card-stats">
         <img className="card-star" src="/assets/star.png" alt="Star icon" />
-        <span>{props.user.stats.rating}</span>
-        <span className="gray">({props.user.stats.reviewCount}) • </span>
-        <span className="gray">{props.user.location}</span>
+        <span>{stats.rating}</span>
+        <span className="gray">({stats.reviewCount}) • </span>
+        <span className="gray">{location}</span>
       </div>
-      <p className="card-title">{props.user.title}</p>
+      <p className="card-title">{title}</p>
       <p className="card-price">
-        <span className="bold ">From ${props.user.price} </span> / person
+        <span className="bold ">From ${price} </span> / person
       </p>
     </div>
   );
