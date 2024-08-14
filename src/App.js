@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar.js";
 // import Hero from "./components/Hero.js";
 import Card from "./components/Card.js";
-import data from "./components/data.js";
+import data from "./data.js";
 
 export default function App() {
   const cards = data.map((user) => {
@@ -17,12 +17,11 @@ export default function App() {
     );
   });
 
-  console.log(cards);
   return (
     <div className="container">
       <Navbar />
       {/* <Hero /> */}
-      {cards}
+      <section className="card-list">{cards}</section>
     </div>
   );
 }
