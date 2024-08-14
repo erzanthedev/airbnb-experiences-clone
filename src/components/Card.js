@@ -3,8 +3,8 @@ export default function Card(props) {
     <section className="card">
       <img
         className="card-image"
-        src="/assets/katie-zaferes.png"
-        alt="Katie Zaferes"
+        src={`/assets/${props.img}`}
+        alt={props.title}
       />
       <div className="card-stats">
         <img className="card-star" src="/assets/star.png" alt="Star icon" />
